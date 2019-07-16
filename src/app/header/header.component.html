@@ -1,0 +1,31 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span class="gap"></span>
+    <span>Liri Labs</span>
+    <span class = "filler"></span>
+  </mat-toolbar-row>
+  <mat-toolbar-row>
+    <div class = "example-button-row">
+      <button mat-icon-button>
+        <mat-icon aria-label="arrow_back">arrow_back</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon aria-label="arrow_forward">arrow_forward</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon aria-label="close">close</mat-icon>
+      </button>
+      <button mat-icon-button>
+        <mat-icon aria-label="Home">home</mat-icon>
+      </button>
+      <a *ngIf="!userIsAuthenticated" mat-button routerLink="/login" routerLinkActive="mat-accent">Login</a>
+      <a *ngIf="!userIsAuthenticated" mat-button routerLink="/signup" routerLinkActive="mat-primary">Signup</a>
+      <a *ngIf="userIsAuthenticated" mat-button>Logout</a>
+    </div>
+    <span class ="filler"></span>
+    <mat-form-field appearance="outline">
+      <mat-icon matPrefix>search</mat-icon>
+      <input type="text" matInput placeholder="Search...">
+    </mat-form-field>
+  </mat-toolbar-row>
+</mat-toolbar>
